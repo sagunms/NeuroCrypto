@@ -1,0 +1,24 @@
+# Visual Studio Ignores
+[Bb]in/
+obj/
+
+*.sln.cache
+*.suo
+*.user
+
+*.ncb
+*.opensdf
+*.sdf
+
+# Resharper Ignores
+_ReSharper.*/
+*.resharper.user
+
+# vim Ignore
+*.swp
+
+# kdiff3 Ignore
+*.orig
+
+# Misc Ignores
+Thumbs.db
