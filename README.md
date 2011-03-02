@@ -4,4 +4,4 @@ This work is the software implementation of the concept of neural cryptography, 
 
 ## License
 
-NeuroCrypto is intended to be used in both open-source and commercial environments. It is licensed under Apache License v3.0 license. Please review LICENSE.txt for more details.
+NeuroCrypto is intended to be used in both open-source and commercial environments. It is licensed under Apache License v2.0 license. Please review LICENSE.txt for more details.
