@@ -1,8 +1,10 @@
-NeuroCrypto
-===========
+NeuroCrypto: Implementation of Neural Cryptography for Public Key Exchange and Secure Message Encryption with Rijndael Cipher
+=============================================================================================================================
 This work is the software implementation of the concept of neural cryptography, which is a communication of two tree parity machines for agreement on a common key over a public channel. This key is utilized to encrypt a sensitive message to be transmitted over an insecure channel using Rijndael cipher. This is a new potential source for public key cryptography schemes which are not based on number theoretic functions, and have small time and memory complexities.
 
 # NeuroCrypto Library [neurocrypto.c and neurocrypto.h]
+
+The following code in the NeuroCrypto library is used to implement classes for tree parity machines which is a special type of multi-layer feed-forward neural network consisting of It consists of one output neuron, K hidden neurons and K * N input neurons. The TPM synchronization algorithm generates random input vector X, computes the values of the hidden and output neurons, compares the values of both TPMs and if same, applies the suitable learning rule to the weights. After synchronization is completed, the public key is used by Rijndael cipher to encrypt or decrypt the given plain text. A brief explaination of the various code snippets in NeuroCrypto library is given below.
 
 ## InputVector class structure
 
