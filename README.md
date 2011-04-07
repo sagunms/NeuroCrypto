@@ -1,7 +1,7 @@
 NeuroCrypto
 ===========
 
-### Implementation of Neural Cryptography for Public Key Exchange and Secure Message Encryption with Rijndael Cipher
+## Implementation of Neural Cryptography for Public Key Exchange and Secure Message Encryption with Rijndael Cipher
 
 This work is the software implementation of the concept of neural cryptography, which is a communication of two tree parity machines for agreement on a common key over a public channel. This key is utilized to encrypt a sensitive message to be transmitted over an insecure channel using Rijndael cipher. This is a new potential source for public key cryptography schemes which are not based on number theoretic functions, and have small time and memory complexities.
 
@@ -182,6 +182,6 @@ The Rjindael Cipher was implemented using System::Security::Cryptography library
 
 NeuroCrypto is intended to be used in both open-source and commercial environments. It is licensed under Apache License v2.0 license. Please review LICENSE.txt for more details.
 
-[Sagun Man Singh Shrestha](http://sagunms.wordpress.com) | http://sagunms.com.np
+Sagun Man Singh Shrestha [sagunms.wordpress.com](http://sagunms.wordpress.com) | [sagunms.com.np](http://sagunms.com.np)
 
-Follow me on twitter [@sagunms](http://www.twitter.com/sagunms)
+Follow me on Twitter [@sagunms](http://www.twitter.com/sagunms)
