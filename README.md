@@ -30,7 +30,7 @@ The input vector X is used throughout the synchronization process to randomly as
 		void RandomWeight ();
 	};
 
-This is the TPM class which is based on the mathematics and algorithm covered in Listings 2.2 and 2.4 and is composed of weight and hidden intermediate DynamicArray objects, K, N and L parameters to characterize TPM and a TPM output variable. Various functions for initialization, weight updating and result computation are defined.
+This is the TPM class which is composed of weight and hidden intermediate DynamicArray objects, K, N and L parameters to characterize TPM and a TPM output variable. Various functions for initialization, weight updating and result computation are defined.
 
 ## NeuroCrypto class structure
 
@@ -44,7 +44,7 @@ This is the TPM class which is based on the mathematics and algorithm covered in
 		NeuroCrypto (int k, int n, int l);
 	};
 
-This is the superset class of NeuroCrypto program module which consists of two TreeParityMachine objects A and B for Alice and Bob’s TPM, a TPMInputVector object objInput, a character array to store the final public key. The default constructor takes the common TPM parameters K, N and L inputted by the user during runtime.
+This is the superset class of NeuroCrypto program module which consists of two TreeParityMachine objects A and B for Alice and Bob's TPM, a TPMInputVector object objInput, a character array to store the final public key. The default constructor takes the common TPM parameters K, N and L inputted by the user during runtime.
 
 ## Variable Declarations and Initialization
 
@@ -52,7 +52,7 @@ This is the superset class of NeuroCrypto program module which consists of two T
 	TreeParityMachine A, B;
 	TPMInputVector objInput;
 	DynamicArray <char> publickey;
-	const char Dictionary [38] = "01234567890-abcdefghijklmnopqrstuvwxyz";
+	const char Dictionary [38] = "01234567890_abcdefghijklmnopqrstuvwxyz";
 	
 	srand (time(NULL)); //random generator
 	cout << "Parameter settings (K, N, L)";
@@ -69,7 +69,7 @@ This is the superset class of NeuroCrypto program module which consists of two T
 	objInput.xLength (B.K, B.N);
 	cout<<"Synchronizing TPM Networks...";
 
-A and B (TPMs of Alice and Bob) are instances of TreeParityMachine class. The publickey object of DynamicArray class stores the final publickey after successful sync. Dictionary array stores 38 symbols (26 alphabets, 10 numbers, and an underscore) as a template for key generation. The system time is used as a seed to generate random numbers. The program takes the parameters K, N and L from the user and initializes the TPMs with the common parameters. 
+A and B (TPMs of Alice and Bob) are instances of TreeParityMachine class. The publickey object of DynamicArray class stores the final publickey after successful sync. Dictionary array stores 38 symbols (10 numbers, 26 alphabets, and an underscore) as a template for key generation. The system time is used as a seed to generate random numbers. The program takes the parameters K, N and L from the user and initializes the TPMs with the common parameters. 
 
 ## Main Iteration
 
@@ -91,7 +91,7 @@ A and B (TPMs of Alice and Bob) are instances of TreeParityMachine class. The pu
 		cout << "Status: SUCCESS!";
 	else cout << "Status: FAILED!";
 
-For each iteration of Alice’s TPM, random input vector will be produced (using CreateRandomVector function of TPMInputVector class), the output value of TPM will be computed (using ComputeTPMResult function) and this output value will be available to Bob’s TPM B. Bob’s TPM should follow the same iterative procedure. During synchronization, both parties A and B continually check for the equality of both their TPMOutput values.
+For each iteration of Alice's TPM, random input vector will be produced (using CreateRandomVector function of TPMInputVector class), the output value of TPM will be computed (using ComputeTPMResult function) and this output value will be available to Bob's TPM B. Bob's TPM should follow the same iterative procedure. During synchronization, both parties A and B continually check for the equality of both their TPMOutput values.
 
 ## Key Generation and Synchronization Outputs
 
@@ -170,6 +170,7 @@ The Rjindael Cipher was implemented using System::Security::Cryptography library
 
 * Microsoft Visual Studio 2010 Ultimate (Visual C++)
 * Rjindael Cipher was implemented using using System::Security::Cryptography library in VS2010.
+* .NET Framework v4 is required to run the binary file that is available in the Downloads section.
 
 
 # License
