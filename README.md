@@ -1,7 +1,7 @@
 NeuroCrypto:
 ============
 
-### C++ Implementation of Neural Cryptography for Public Key Exchange and Secure Message Encryption with Rijndael Cipher
+### Implementation of Neural Cryptography for Public Key Exchange & Secure Message Encryption with Rijndael Cipher
 
 This work is the software implementation of the concept of neural cryptography, which is a communication of two tree parity machines for agreement on a common key over a public channel. This key is utilized to encrypt a sensitive message to be transmitted over an insecure channel using Rijndael cipher. This is a new potential source for public key cryptography schemes which are not based on number theoretic functions, and have small time and memory complexities.
 
